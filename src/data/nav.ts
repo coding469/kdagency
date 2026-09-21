@@ -13,8 +13,8 @@ export const navLinks: NavLink[] = [
 ]
 
 export const contactInfo = {
-  whatsapp: '+221 XX XXX XX XX',
-  whatsappHref: 'https://wa.me/221XXXXXXXXX',
-  email: 'contact@votre-domaine.sn',
-  location: 'Sénégal · [Ville / Adresse]',
+  whatsapp: '+221 77 087 46 19',
+  whatsappHref: 'https://wa.me/221770874619',
+  email: 'ccoding845@gmail.com',
+  location: 'Yoff, Dakar, Sénégal',
 }
