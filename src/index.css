@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Sora", "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-cyan: #009fe3;
+  --color-brand-cyan-light: #6fd0f7;
+  --color-brand-cyan-dark: #0086c2;
+  --color-brand-navy: #26326b;
+  --color-brand-navy-light: #35407a;
+  --color-brand-blue: #254fa9;
+  --color-brand-blue-dark: #1d3f87;
+  --color-brand-blue-light: #4b6db8;
+
+  --color-surface: #ffffff;
+  --color-surface-soft: #f4f7fc;
+  --color-border-soft: #dce3f1;
+  --color-icon-bg: #e6f5fd;
+
+  --color-ink: #26326b;
+  --color-body: #4a5580;
+  --color-muted: #5f6a93;
+  --color-error: #b3261e;
+
+  --radius-field: 0.625rem;
+  --radius-card: 1rem;
+  --radius-panel: 1.25rem;
+
+  --shadow-card: 0 1px 2px rgba(38, 50, 107, 0.06), 0 8px 24px rgba(38, 50, 107, 0.08);
+  --shadow-card-hover: 0 4px 8px rgba(38, 50, 107, 0.08), 0 16px 32px rgba(38, 50, 107, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-body);
+  background-color: var(--color-surface);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-ink);
+}
