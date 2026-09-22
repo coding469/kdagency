@@ -23,13 +23,21 @@ export default function ProjectCard({ project }: { project: Project }) {
             <TagChip key={tag}>{tag}</TagChip>
           ))}
         </div>
-        <button
-          type="button"
-          className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-blue hover:gap-2.5 transition-[gap]"
-        >
-          Voir le projet
-          <ArrowRight size={16} />
-        </button>
+        {project.url ? (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-blue hover:gap-2.5 transition-[gap]"
+          >
+            Voir le projet
+            <ArrowRight size={16} />
+          </a>
+        ) : (
+          <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-muted">
+            Maquette de démonstration
+          </span>
+        )}
       </div>
     </article>
   )

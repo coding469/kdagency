@@ -12,9 +12,21 @@ export interface Project {
   tags: string[]
   isDemo: boolean
   accent: 'browser' | 'dashboard' | 'grid' | 'cards' | 'code'
+  url?: string
 }
 
 export const projects: Project[] = [
+  {
+    id: 'pushagri',
+    title: "Push'Agri Farm",
+    category: 'Site web',
+    description:
+      'Site vitrine pour une entreprise de pisciculture : présentation de l’activité et de l’exploitation.',
+    tags: ['React', 'Laravel'],
+    isDemo: false,
+    accent: 'browser',
+    url: 'https://pushagri.com',
+  },
   {
     id: 'restaurant',
     title: 'Site vitrine pour restaurant',
