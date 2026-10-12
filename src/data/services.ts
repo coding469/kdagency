@@ -3,7 +3,6 @@ import {
   Monitor,
   Smartphone,
   Box,
-  GraduationCap,
   Wrench,
   Compass,
 } from 'lucide-react'
@@ -95,33 +94,8 @@ export const services: Service[] = [
     ctaTo: '/contact',
   },
   {
-    id: 'formation',
-    letter: 'D',
-    shortLabel: 'Formation',
-    icon: GraduationCap,
-    title: 'Formation en développement web',
-    summary:
-      'Des formations pratiques, centrées sur la réalisation de projets, pour apprendre le développement web à votre rythme.',
-    audience: ['Débutants', 'Étudiants', 'Reconversion'],
-    problems: [
-      'Difficulté à savoir par où commencer.',
-      'Des cours trop théoriques, sans projet concret.',
-      "Besoin d'un accompagnement humain pour progresser.",
-    ],
-    offers: [
-      'HTML et CSS',
-      'JavaScript',
-      'React',
-      'Laravel',
-      'Projets pratiques',
-      'Accompagnement des débutants',
-    ],
-    ctaLabel: 'Voir les formations',
-    ctaTo: '/formation',
-  },
-  {
     id: 'maintenance',
-    letter: 'E',
+    letter: 'D',
     shortLabel: 'Maintenance',
     icon: Wrench,
     title: 'Maintenance et support',
@@ -144,7 +118,7 @@ export const services: Service[] = [
   },
   {
     id: 'conseil',
-    letter: 'F',
+    letter: 'E',
     shortLabel: 'Conseil',
     icon: Compass,
     title: 'Conseil digital',

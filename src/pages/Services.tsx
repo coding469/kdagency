@@ -10,7 +10,7 @@ export default function Services() {
       <PageBanner
         crumb="Services"
         title="Des services digitaux adaptés à vos besoins"
-        description="Sites web, applications, outils de gestion, formation et accompagnement : chaque prestation est ajustée à votre projet."
+        description="Sites web, applications, outils de gestion et accompagnement : chaque prestation est ajustée à votre projet."
       />
 
       <section className="border-b border-border-soft py-6">

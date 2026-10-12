@@ -11,7 +11,7 @@ import HeroIllustration from '@/components/HeroIllustration'
 import { services } from '@/data/services'
 import { projects } from '@/data/projects'
 
-const highlights = ['Sites web et applications', 'Solutions de gestion', 'Formation']
+const highlights = ['Sites web et applications', 'Solutions de gestion']
 
 const whyChooseUs = [
   {

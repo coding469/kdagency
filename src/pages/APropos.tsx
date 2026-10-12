@@ -51,8 +51,9 @@ const values = [
 
 const skills = {
   'Développement web': ['HTML', 'CSS', 'JavaScript', 'React', 'Laravel'],
+  'Développement mobile': ['Flutter', 'Java'],
   'Types de projets': ['Sites vitrines', 'Sites e-commerce', 'Applications web', 'Solutions de gestion'],
-  Accompagnement: ['Conseil digital', 'Maintenance et support', 'Formation'],
+  Accompagnement: ['Conseil digital', 'Maintenance et support'],
 }
 
 const timeline = [
@@ -97,10 +98,6 @@ export default function APropos() {
               Kanoute Digital Agency est une agence digitale sénégalaise. Nous accompagnons les
               entreprises, les commerces et les entrepreneurs dans la création de sites web,
               d'applications et d'outils de gestion adaptés à leur réalité.
-            </p>
-            <p className="mt-4 text-body">
-              Nous partageons aussi notre savoir-faire à travers des formations en développement
-              web, pour aider les débutants à construire leurs premiers projets.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button to="/contact">Parler de votre projet</Button>

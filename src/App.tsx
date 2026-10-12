@@ -5,7 +5,6 @@ import Layout from '@/components/layout/Layout'
 import Home from '@/pages/Home'
 import Services from '@/pages/Services'
 import Portfolio from '@/pages/Portfolio'
-import Formation from '@/pages/Formation'
 import APropos from '@/pages/APropos'
 import Contact from '@/pages/Contact'
 import AdminLogin from '@/pages/admin/Login'
@@ -19,7 +18,6 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/formation" element={<Formation />} />
           <Route path="/a-propos" element={<APropos />} />
           <Route path="/contact" element={<Contact />} />
         </Route>

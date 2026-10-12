@@ -30,7 +30,7 @@ export default function AdminDashboard() {
         <h1 className="font-heading text-3xl font-bold text-ink">Tableau de bord</h1>
         <p className="mt-3 max-w-xl text-body">
           Connecté en tant que <strong>{user?.email}</strong>. La gestion du portfolio, des
-          services, des formations et des demandes de devis arrivera ici prochainement.
+          services et des demandes de devis arrivera ici prochainement.
         </p>
       </main>
     </div>
