@@ -7,7 +7,7 @@ export interface Project {
   description: string
   tags: string[]
   isDemo: boolean
-  accent: 'browser' | 'dashboard' | 'grid' | 'cards' | 'code'
+  image: string
   url?: string
 }
 
@@ -20,38 +20,41 @@ export const projects: Project[] = [
       'Site vitrine pour une entreprise de pisciculture : présentation de l’activité et de l’exploitation.',
     tags: ['React', 'Laravel'],
     isDemo: false,
-    accent: 'browser',
+    image: '/images/projects/pushagri.jpg',
     url: 'https://pushagri.com',
   },
   {
-    id: 'restaurant',
-    title: 'Site vitrine pour restaurant',
-    category: 'Site web',
-    description:
-      'Maquette de démonstration : présentation du restaurant, menu digital, horaires et contact par WhatsApp.',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    isDemo: true,
-    accent: 'browser',
-  },
-  {
-    id: 'ecommerce',
-    title: 'Site e-commerce',
-    category: 'Site web',
-    description:
-      "Démonstration d'une boutique en ligne : catalogue, fiche produit, panier et prise de commande.",
-    tags: ['React', 'Tailwind CSS', 'Laravel'],
-    isDemo: true,
-    accent: 'grid',
-  },
-  {
-    id: 'app-metier',
-    title: 'Application web personnalisée',
+    id: 'china-online-base',
+    title: 'China Online Base',
     category: 'Application web',
     description:
-      'Exemple d’application métier sur mesure avec tableau de bord et interface d’administration.',
-    tags: ['React', 'TypeScript', 'API REST'],
-    isDemo: true,
-    accent: 'cards',
+      'Plateforme avec espace de connexion pour organiser et centraliser des contacts fournisseurs.',
+    tags: ['React', 'Laravel'],
+    isDemo: false,
+    image: '/images/projects/china-online-base.jpg',
+    url: 'https://chinaonlinebase.com/login',
+  },
+  {
+    id: 'hotel-aicha',
+    title: 'Hôtel Résidence Aïcha',
+    category: 'Site web',
+    description:
+      'Site vitrine pour un hôtel à Tambacounda : présentation des chambres, galerie photo et réservation via WhatsApp.',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    isDemo: false,
+    image: '/images/projects/hotel-aicha.jpg',
+    url: 'https://www.hotelaicha.com/',
+  },
+  {
+    id: 'codingfatima',
+    title: 'Coding Fatima',
+    category: 'Site web',
+    description:
+      'Portfolio professionnel présentant les services, projets et formations.',
+    tags: ['React'],
+    isDemo: false,
+    image: '/images/projects/codingfatima.jpg',
+    url: 'https://codingfatima.com',
   },
 ]
 

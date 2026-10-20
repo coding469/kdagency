@@ -1,12 +1,18 @@
 import { ArrowRight } from 'lucide-react'
 import type { Project } from '@/data/projects'
-import ProjectThumbnail from './ProjectThumbnail'
 import { TagChip } from './ui/Badge'
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="overflow-hidden rounded-2xl border border-border-soft bg-white">
-      <ProjectThumbnail accent={project.accent} />
+      <div className="h-44 overflow-hidden rounded-t-2xl bg-surface-soft">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="h-full w-full object-cover object-top"
+          loading="lazy"
+        />
+      </div>
       <div className="p-6">
         <div className="mb-3 flex flex-wrap items-center gap-2">
           {project.isDemo && (

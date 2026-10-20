@@ -11,8 +11,6 @@ import HeroIllustration from '@/components/HeroIllustration'
 import { services } from '@/data/services'
 import { projects } from '@/data/projects'
 
-const highlights = ['Sites web et applications', 'Solutions de gestion']
-
 const whyChooseUs = [
   {
     icon: SlidersHorizontal,
@@ -112,20 +110,6 @@ export default function Home() {
                 Découvrir nos services
               </Button>
             </div>
-            <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm font-medium text-ink">
-              {highlights.map((h) => (
-                <li key={h} className="flex items-center gap-2">
-                  <svg viewBox="0 0 20 20" className="h-4 w-4 text-brand-blue" fill="currentColor">
-                    <path
-                      fillRule="evenodd"
-                      d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0L3.3 9.7a1 1 0 111.4-1.4L8 11.6l6.8-6.8a1 1 0 011.4 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  {h}
-                </li>
-              ))}
-            </ul>
           </div>
           <HeroIllustration />
         </div>
@@ -179,14 +163,7 @@ export default function Home() {
 
       {/* About teaser */}
       <section className="bg-surface-soft py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2 lg:px-8">
-          <div className="relative flex aspect-square items-center justify-center overflow-hidden rounded-3xl bg-icon-bg">
-            <div className="absolute -top-10 -left-10 h-40 w-40 rounded-full bg-white/60" />
-            <div className="absolute -right-16 -bottom-16 h-56 w-56 rounded-full bg-white/50" />
-            <span className="relative rounded-full border border-dashed border-brand-blue/40 bg-white/80 px-4 py-2 text-xs font-medium text-brand-blue">
-              [Photo professionnelle de la fondatrice]
-            </span>
-          </div>
+        <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <div>
             <p className="text-sm font-semibold tracking-wider text-brand-blue uppercase">
               À propos

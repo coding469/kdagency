@@ -17,7 +17,7 @@ export default function Portfolio() {
       <PageBanner
         crumb="Portfolio"
         title="Des projets pour montrer notre façon de travailler"
-        description="Sites web, applications et solutions de gestion. Les projets marqués « démonstration » sont des exemples conçus par l'agence, pas des réalisations clients."
+        description="Sites web, applications et solutions de gestion réalisés pour nos clients."
       />
 
       <section className="border-b border-border-soft py-6">

@@ -3,6 +3,7 @@ import { Mail, MapPin, MessageCircle } from 'lucide-react'
 import PageBanner from '@/components/ui/PageBanner'
 import Button from '@/components/ui/Button'
 import TextField from '@/components/ui/TextField'
+import TikTokIcon from '@/components/ui/TikTokIcon'
 import { contactInfo } from '@/data/nav'
 
 export default function Contact() {
@@ -90,6 +91,17 @@ export default function Contact() {
                 <li className="flex items-start gap-3">
                   <MapPin size={18} className="mt-0.5 shrink-0 text-brand-blue" />
                   <span>{contactInfo.location}</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <TikTokIcon size={18} className="mt-0.5 shrink-0 text-brand-blue" />
+                  <a
+                    href={contactInfo.tiktokHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-brand-blue"
+                  >
+                    TikTok {contactInfo.tiktok}
+                  </a>
                 </li>
               </ul>
             </div>

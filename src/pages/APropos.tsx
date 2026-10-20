@@ -56,12 +56,6 @@ const skills = {
   Accompagnement: ['Conseil digital', 'Maintenance et support'],
 }
 
-const timeline = [
-  { year: '[Année]', text: '[Formation ou première étape du parcours]' },
-  { year: '[Année]', text: '[Expérience ou projet marquant]' },
-  { year: '[Année]', text: '[Création de Kanoute Digital Agency]' },
-]
-
 const approach = [
   { icon: Handshake, title: "Écouter d'abord", text: 'Nous comprenons votre activité avant de proposer une solution.' },
   { icon: Repeat, title: 'Avancer par étapes', text: 'Chaque phase est validée avec vous avant de passer à la suivante.' },
@@ -79,14 +73,7 @@ export default function APropos() {
       />
 
       <section className="py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2 lg:px-8">
-          <div className="relative flex aspect-square items-center justify-center overflow-hidden rounded-3xl bg-icon-bg">
-            <div className="absolute -top-10 -left-10 h-40 w-40 rounded-full bg-white/60" />
-            <div className="absolute -right-16 -bottom-16 h-56 w-56 rounded-full bg-white/50" />
-            <span className="relative rounded-full border border-dashed border-brand-blue/40 bg-white/80 px-4 py-2 text-xs font-medium text-brand-blue">
-              [Photo professionnelle de la fondatrice]
-            </span>
-          </div>
+        <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <div>
             <p className="text-sm font-semibold tracking-wider text-brand-blue uppercase">
               Présentation de l'agence
@@ -171,35 +158,6 @@ export default function APropos() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:px-8">
-          <div>
-            <p className="text-sm font-semibold tracking-wider text-brand-blue uppercase">
-              Fondatrice
-            </p>
-            <h2 className="mt-3 text-3xl font-bold">Parcours de la fondatrice</h2>
-            <p className="mt-4 text-body">
-              Formation, expériences et motivations : cette section présentera le parcours réel de
-              la fondatrice.
-            </p>
-          </div>
-          <div className="space-y-4">
-            {timeline.map((t, i) => (
-              <div
-                key={i}
-                className="flex items-start gap-4 rounded-xl border border-dashed border-border-soft px-5 py-4"
-              >
-                <span className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-brand-cyan" />
-                <div>
-                  <p className="text-sm font-semibold text-brand-blue">{t.year}</p>
-                  <p className="mt-0.5 text-sm text-body">{t.text}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

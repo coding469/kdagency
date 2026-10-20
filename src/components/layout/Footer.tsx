@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
-import { AtSign, Globe, Mail, MapPin, MessageCircle, Share2 } from 'lucide-react'
+import { Mail, MapPin, MessageCircle } from 'lucide-react'
 import Logo from '@/components/ui/Logo'
+import TikTokIcon from '@/components/ui/TikTokIcon'
 import { navLinks, contactInfo } from '@/data/nav'
 import { services } from '@/data/services'
 
@@ -17,16 +18,15 @@ export default function Footer() {
               développement web.
             </p>
             <div className="mt-6 flex gap-3">
-              {[Globe, Share2, AtSign].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  aria-label="Réseau social"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 text-white transition-colors hover:bg-white/10"
-                >
-                  <Icon size={16} />
-                </a>
-              ))}
+              <a
+                href={contactInfo.tiktokHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`TikTok ${contactInfo.tiktok}`}
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 text-white transition-colors hover:bg-white/10"
+              >
+                <TikTokIcon />
+              </a>
             </div>
           </div>
 

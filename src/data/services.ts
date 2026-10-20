@@ -5,6 +5,7 @@ import {
   Box,
   Wrench,
   Compass,
+  GraduationCap,
 } from 'lucide-react'
 
 export interface Service {
@@ -18,7 +19,8 @@ export interface Service {
   problems: string[]
   offers: string[]
   ctaLabel: string
-  ctaTo: string
+  ctaTo?: string
+  ctaHref?: string
 }
 
 export const services: Service[] = [
@@ -137,5 +139,28 @@ export const services: Service[] = [
     ],
     ctaLabel: 'Demander un devis',
     ctaTo: '/contact',
+  },
+  {
+    id: 'formation',
+    letter: 'F',
+    shortLabel: 'Formation',
+    icon: GraduationCap,
+    title: 'Formation : créer son site web sans savoir coder',
+    summary:
+      "Apprenez à créer votre propre site web grâce à l'IA, étape par étape, même sans aucune compétence en programmation.",
+    audience: ['Entrepreneurs', 'Indépendants', 'Débutants'],
+    problems: [
+      'Vous voulez un site mais vous ne savez pas coder.',
+      "Vous ne savez pas comment utiliser l'IA pour créer un site.",
+      'Les formations classiques sont trop techniques ou trop théoriques.',
+    ],
+    offers: [
+      'Préparer son projet de site',
+      "Bien utiliser l'IA pour créer son site",
+      'Personnaliser son site',
+      'Publier son site en ligne',
+    ],
+    ctaLabel: 'Voir la formation',
+    ctaHref: 'https://iwujdufq.mychariow.com/prd_jmtysxyu',
   },
 ]

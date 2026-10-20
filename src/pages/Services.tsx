@@ -51,9 +51,20 @@ export default function Services() {
                     ))}
                   </div>
 
-                  <Button to={service.ctaTo} className="mt-8">
-                    {service.ctaLabel}
-                  </Button>
+                  {service.ctaHref ? (
+                    <Button
+                      href={service.ctaHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-8"
+                    >
+                      {service.ctaLabel}
+                    </Button>
+                  ) : (
+                    <Button to={service.ctaTo ?? '/contact'} className="mt-8">
+                      {service.ctaLabel}
+                    </Button>
+                  )}
                 </div>
 
                 <div className="rounded-2xl border border-border-soft bg-white p-8">
