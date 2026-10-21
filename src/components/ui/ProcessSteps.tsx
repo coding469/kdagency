@@ -1,3 +1,5 @@
+import Reveal from './Reveal'
+
 interface Step {
   step: number
   title: string
@@ -17,14 +19,14 @@ export default function ProcessSteps({ steps, columns = 6 }: ProcessStepsProps) 
       {columns === 6 && (
         <div className="pointer-events-none absolute top-6 right-6 left-6 hidden h-px bg-border-soft lg:block" />
       )}
-      {steps.map((s) => (
-        <div key={s.step} className="relative">
+      {steps.map((s, i) => (
+        <Reveal key={s.step} delay={i * 80} className="relative">
           <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-brand-blue text-lg font-bold text-white">
             {String(s.step).padStart(2, '0')}
           </div>
           <h3 className="mt-4 text-lg font-semibold">{s.title}</h3>
           <p className="mt-2 text-sm text-body">{s.text}</p>
-        </div>
+        </Reveal>
       ))}
     </div>
   )

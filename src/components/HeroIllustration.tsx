@@ -1,59 +1,32 @@
 export default function HeroIllustration() {
   return (
     <div className="relative mx-auto h-[360px] w-full max-w-md sm:h-[420px]">
-      <div className="absolute top-0 left-0 h-64 w-[85%] rounded-2xl border border-border-soft bg-white p-5 shadow-xl shadow-brand-navy/5">
-        <div className="mb-4 flex items-center gap-1.5">
-          <span className="h-2 w-2 rounded-full bg-brand-cyan" />
-          <span className="h-2 w-2 rounded-full bg-border-soft" />
-          <span className="h-2 w-2 rounded-full bg-border-soft" />
-          <span className="ml-3 h-3 flex-1 rounded bg-surface-soft" />
+      <div className="absolute top-0 left-0 w-[88%] overflow-hidden rounded-2xl border border-border-soft bg-white shadow-xl shadow-brand-navy/10">
+        <div className="flex items-center gap-1.5 border-b border-border-soft bg-surface-soft px-4 py-2.5">
+          <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
+          <span className="ml-3 flex-1 truncate rounded bg-white px-2 py-0.5 text-[10px] text-muted">
+            pushagri.com
+          </span>
         </div>
-        <div className="mb-3 h-3 w-8 rounded bg-brand-navy" />
-        <div className="mb-1.5 h-3 w-3/4 rounded bg-brand-navy" />
-        <div className="mb-4 h-2 w-1/2 rounded bg-border-soft" />
-        <div className="flex items-center gap-3">
-          <span className="h-9 w-9 shrink-0 rounded-full bg-brand-cyan/80" />
-          <span className="h-9 flex-1 rounded-lg bg-icon-bg" />
-        </div>
-        <div className="mt-4 h-8 w-24 rounded-lg bg-brand-blue" />
-        <div className="mt-4 grid grid-cols-3 gap-2">
-          <span className="h-8 rounded-md bg-surface-soft" />
-          <span className="h-8 rounded-md bg-surface-soft" />
-          <span className="h-8 rounded-md bg-brand-navy" />
-        </div>
+        <img
+          src="/images/projects/pushagri.jpg"
+          alt="Site réalisé par Kanoute Digital Agency"
+          className="h-48 w-full object-cover object-top sm:h-56"
+        />
       </div>
 
-      <div className="absolute top-40 left-[8%] h-44 w-[70%] rounded-2xl border border-border-soft bg-white p-5 shadow-xl shadow-brand-navy/5">
-        <div className="mb-3 flex items-center justify-between">
-          <div className="h-2.5 w-2/5 rounded bg-brand-navy" />
-          <div className="h-4 w-10 rounded bg-brand-cyan" />
-        </div>
-        <div className="mb-2 h-2 w-3/5 rounded bg-border-soft" />
-        <div className="mb-4 h-2 w-2/5 rounded bg-border-soft" />
-        <div className="flex items-end gap-2">
-          {[22, 34, 18, 28, 14].map((h, i) => (
-            <span
-              key={i}
-              style={{ height: `${h}px` }}
-              className={`w-4 rounded-t ${i % 2 === 0 ? 'bg-brand-blue' : 'bg-brand-cyan'}`}
-            />
-          ))}
-        </div>
+      <div className="absolute right-0 bottom-0 w-44 rounded-2xl border border-border-soft bg-white p-5 shadow-2xl shadow-brand-navy/15 sm:w-48">
+        <p className="text-3xl font-bold text-brand-blue">100%</p>
+        <p className="mt-1 text-xs leading-relaxed text-body">
+          Projets réels, livrés à des clients sénégalais
+        </p>
       </div>
 
-      <div className="absolute top-6 right-0 w-36 overflow-hidden rounded-3xl border-4 border-brand-navy bg-white shadow-2xl shadow-brand-navy/20 sm:w-40">
-        <div className="space-y-2 bg-brand-blue p-4">
-          <div className="h-1.5 w-1/2 rounded bg-white/70" />
-        </div>
-        <div className="space-y-3 p-4">
-          {[0, 1, 2].map((i) => (
-            <div key={i} className="flex items-center gap-2">
-              <span className="h-4 w-4 shrink-0 rounded-full bg-icon-bg" />
-              <span className="h-1.5 flex-1 rounded bg-surface-soft" />
-            </div>
-          ))}
-          <div className="mt-2 h-7 rounded-lg bg-brand-blue" />
-        </div>
+      <div className="absolute top-6 -right-2 flex items-center gap-2 rounded-full border border-border-soft bg-white px-4 py-2 shadow-lg shadow-brand-navy/10 sm:right-4">
+        <span className="h-2 w-2 shrink-0 animate-pulse rounded-full bg-brand-cyan" />
+        <span className="text-xs font-medium text-ink">Site en ligne</span>
       </div>
     </div>
   )

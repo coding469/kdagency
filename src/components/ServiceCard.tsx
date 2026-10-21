@@ -11,6 +11,11 @@ export default function ServiceCard({ service }: { service: Service }) {
       </div>
       <h3 className="mt-5 text-lg font-semibold text-ink">{service.title}</h3>
       <p className="mt-3 text-sm leading-relaxed text-body">{service.summary}</p>
+      {service.pricing?.[0] ? (
+        <p className="mt-3 text-sm font-semibold text-brand-blue">{service.pricing[0].price}</p>
+      ) : service.priceNote ? (
+        <p className="mt-3 text-sm font-semibold text-brand-blue">{service.priceNote}</p>
+      ) : null}
       <Link
         to={`/services#${service.id}`}
         className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-blue hover:gap-2.5 transition-[gap]"

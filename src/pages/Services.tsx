@@ -51,6 +51,31 @@ export default function Services() {
                     ))}
                   </div>
 
+                  {service.pricing && (
+                    <div className="mt-6 space-y-2">
+                      {service.pricing.map((p) => (
+                        <div
+                          key={p.label}
+                          className="flex items-center justify-between gap-4 rounded-xl border border-border-soft bg-surface-soft px-4 py-3"
+                        >
+                          <div>
+                            <p className="text-sm font-semibold text-ink">{p.label}</p>
+                            <p className="text-xs text-muted">Délai : {p.delay}</p>
+                          </div>
+                          <p className="shrink-0 text-sm font-bold text-brand-blue">{p.price}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {!service.pricing && service.priceNote && (
+                    <p className="mt-6 inline-flex rounded-full border border-border-soft bg-surface-soft px-4 py-2 text-sm font-semibold text-ink">
+                      {service.priceNote}
+                    </p>
+                  )}
+                  {service.pricing && service.priceNote && (
+                    <p className="mt-2 text-xs text-muted">{service.priceNote}</p>
+                  )}
+
                   {service.ctaHref ? (
                     <Button
                       href={service.ctaHref}

@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import PageBanner from '@/components/ui/PageBanner'
 import ProjectCard from '@/components/ProjectCard'
 import CTASection from '@/components/ui/CTASection'
+import Reveal from '@/components/ui/Reveal'
 import { projects, projectFilters, type ProjectCategory } from '@/data/projects'
 
 export default function Portfolio() {
@@ -17,7 +18,7 @@ export default function Portfolio() {
       <PageBanner
         crumb="Portfolio"
         title="Des projets pour montrer notre façon de travailler"
-        description="Sites web, applications et solutions de gestion réalisés pour nos clients."
+        description="Sites web, applications et solutions de gestion réalisés pour nos clients — des projets réels, avec des liens vérifiables, pas des maquettes."
       />
 
       <section className="border-b border-border-soft py-6">
@@ -60,8 +61,10 @@ export default function Portfolio() {
             </p>
           ) : (
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {filtered.map((p) => (
-                <ProjectCard key={p.id} project={p} />
+              {filtered.map((p, i) => (
+                <Reveal key={p.id} delay={(i % 3) * 80}>
+                  <ProjectCard project={p} />
+                </Reveal>
               ))}
             </div>
           )}

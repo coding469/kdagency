@@ -8,6 +8,12 @@ import {
   GraduationCap,
 } from 'lucide-react'
 
+export interface ServicePricingItem {
+  label: string
+  price: string
+  delay: string
+}
+
 export interface Service {
   id: string
   letter: string
@@ -18,6 +24,8 @@ export interface Service {
   audience: string[]
   problems: string[]
   offers: string[]
+  pricing?: ServicePricingItem[]
+  priceNote?: string
   ctaLabel: string
   ctaTo?: string
   ctaHref?: string
@@ -44,7 +52,13 @@ export const services: Service[] = [
       'Menus digitaux pour restaurants',
       'Sites e-commerce',
       'Catalogues de produits',
+      'Référencement technique (SEO) inclus',
     ],
+    pricing: [
+      { label: 'Site vitrine', price: 'À partir de 150 000 FCFA', delay: '1 à 2 semaines' },
+      { label: 'Site e-commerce', price: 'À partir de 250 000 FCFA', delay: '3 à 4 semaines' },
+    ],
+    priceNote: 'Nom de domaine offert la 1ère année.',
     ctaLabel: 'Demander un devis',
     ctaTo: '/contact',
   },
@@ -68,6 +82,7 @@ export const services: Service[] = [
       'Applications mobiles selon les besoins',
       'Solutions personnalisées',
     ],
+    priceNote: 'Sur devis, selon la complexité du projet.',
     ctaLabel: 'Demander un devis',
     ctaTo: '/contact',
   },
@@ -114,6 +129,7 @@ export const services: Service[] = [
       'Mises à jour',
       'Assistance technique',
       'Maintenance évolutive selon contrat',
+      'Référencement continu (SEO) en option, sur devis',
     ],
     ctaLabel: 'Demander un devis',
     ctaTo: '/contact',

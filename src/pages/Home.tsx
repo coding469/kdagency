@@ -8,6 +8,7 @@ import ValueItem from '@/components/ui/ValueItem'
 import ProcessSteps from '@/components/ui/ProcessSteps'
 import CTASection from '@/components/ui/CTASection'
 import HeroIllustration from '@/components/HeroIllustration'
+import Reveal from '@/components/ui/Reveal'
 import { services } from '@/data/services'
 import { projects } from '@/data/projects'
 
@@ -115,6 +116,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Differentiator banner */}
+      <section className="border-y border-border-soft bg-icon-bg/60">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-5 text-center sm:flex-row sm:text-left lg:px-8">
+          <p className="text-sm font-medium text-ink">
+            <span className="font-semibold text-brand-blue">Ce qui nous différencie :</span> une
+            agence qui crée votre site <span className="font-semibold">et</span> une formation
+            accessible pour apprendre à le faire vous-même.
+          </p>
+          <Link
+            to="/services#formation"
+            className="inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-brand-blue hover:gap-2.5 transition-[gap]"
+          >
+            Découvrir la formation
+            <ArrowRight size={16} />
+          </Link>
+        </div>
+      </section>
+
       {/* Services */}
       <section className="bg-surface-soft py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -131,8 +150,10 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((s) => (
-              <ServiceCard key={s.id} service={s} />
+            {services.map((s, i) => (
+              <Reveal key={s.id} delay={(i % 3) * 80}>
+                <ServiceCard service={s} />
+              </Reveal>
             ))}
           </div>
         </div>
@@ -207,6 +228,9 @@ export default function Home() {
               <h2 className="mt-3 max-w-xl text-3xl font-bold sm:text-4xl">
                 Des projets pour illustrer notre façon de travailler
               </h2>
+              <p className="mt-2 text-sm text-muted">
+                Projets réels, liens vérifiables — pas de maquettes.
+              </p>
             </div>
             <Link
               to="/portfolio"
@@ -217,8 +241,10 @@ export default function Home() {
             </Link>
           </div>
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {projects.slice(0, 3).map((p) => (
-              <ProjectCard key={p.id} project={p} />
+            {projects.slice(0, 3).map((p, i) => (
+              <Reveal key={p.id} delay={(i % 3) * 80}>
+                <ProjectCard project={p} />
+              </Reveal>
             ))}
           </div>
         </div>

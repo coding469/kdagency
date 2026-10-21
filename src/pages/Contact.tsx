@@ -5,13 +5,38 @@ import Button from '@/components/ui/Button'
 import TextField from '@/components/ui/TextField'
 import TikTokIcon from '@/components/ui/TikTokIcon'
 import { contactInfo } from '@/data/nav'
+import { supabase, isSupabaseConfigured } from '@/lib/supabase'
+
+type Status = 'idle' | 'loading' | 'success' | 'error'
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState<Status>('idle')
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    setSubmitted(true)
+    const form = event.currentTarget
+
+    if (!isSupabaseConfigured) {
+      setStatus('error')
+      return
+    }
+
+    setStatus('loading')
+    const data = new FormData(form)
+    const { error } = await supabase.from('quote_requests').insert({
+      first_name: String(data.get('firstName') ?? ''),
+      last_name: String(data.get('lastName') ?? ''),
+      email: String(data.get('email') ?? ''),
+      message: String(data.get('message') ?? ''),
+    })
+
+    if (error) {
+      setStatus('error')
+      return
+    }
+
+    setStatus('success')
+    form.reset()
   }
 
   return (
@@ -28,9 +53,15 @@ export default function Contact() {
             onSubmit={handleSubmit}
             className="min-w-0 rounded-card border border-border-soft bg-white p-8 shadow-card"
           >
-            {submitted && (
+            {status === 'success' && (
               <p className="mb-6 rounded-field bg-icon-bg px-4 py-3 text-sm text-brand-blue">
-                Information. Envoi non configuré : aucune donnée n'est transmise.
+                Votre demande a bien été envoyée. Nous revenons vers vous rapidement.
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="mb-6 rounded-field bg-error/10 px-4 py-3 text-sm text-error">
+                Un problème est survenu lors de l'envoi. Contactez-nous directement par WhatsApp ou
+                e-mail ci-contre en attendant.
               </p>
             )}
 
@@ -67,8 +98,8 @@ export default function Contact() {
               Vos informations servent uniquement à répondre à votre demande.
             </p>
 
-            <Button type="submit" className="mt-6 w-full sm:w-auto">
-              Envoyer la demande
+            <Button type="submit" className="mt-6 w-full sm:w-auto" disabled={status === 'loading'}>
+              {status === 'loading' ? 'Envoi...' : 'Envoyer la demande'}
             </Button>
           </form>
 
